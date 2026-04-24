@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lav to Love ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+height:100vh;overflow:hidden;
+display:flex;justify-content:center;align-items:center;
+background:linear-gradient(-45deg,#ff4b5c,#ff758c,#ff7eb3,#ffb199);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+color:white;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.main{
+width:90%;max-width:900px;
+padding:30px;border-radius:25px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+box-shadow:0 0 40px rgba(0,0,0,0.4);
+text-align:center;
+}
+
+/* pages */
+.page{display:none;animation:fade 0.8s;}
+.active{display:block;}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;}
+}
+
+h1{
+font-size:2.7rem;
+text-shadow:0 0 15px white;
+}
+
+.text{
+margin-top:20px;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+/* buttons */
+button{
+margin:8px;padding:12px 20px;
+border:none;border-radius:30px;
+background:white;color:#ff4b5c;
+font-weight:bold;cursor:pointer;
+transition:0.3s;
+}
+button:hover{
+transform:scale(1.1);
+background:#ff4b5c;color:white;
+box-shadow:0 0 15px #ff4b5c;
+}
+
+/* story cinematic */
+.story{
+margin-top:20px;
+height:300px;
+overflow:hidden;
+position:relative;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.story-content{
+position:absolute;
+width:100%;
+animation:moveUp 30s linear forwards;
+}
+
+@keyframes moveUp{
+0%{top:100%;}
+100%{top:-120%;}
+}
+
+/* fade top bottom */
+.story::before,
+.story::after{
+content:"";
+position:absolute;
+width:100%;
+height:60px;
+left:0;
+z-index:2;
+}
+
+.story::before{
+top:0;
+background:linear-gradient(to bottom,#ff758c,transparent);
+}
+
+.story::after{
+bottom:0;
+background:linear-gradient(to top,#ff758c,transparent);
+}
+
+/* distance */
+.distance{
+font-size:1.6rem;
+margin-top:20px;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.2);}
+}
+
+/* gallery */
+.gallery img{
+width:250px;height:300px;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+/* hearts */
+.heart{
+position:absolute;
+bottom:-10px;
+animation:float 6s linear infinite;
+}
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-100vh);opacity:0;}
+}
+
+/* final text glow */
+.love{
+font-size:1.5rem;
+margin-top:20px;
+animation:glow 1.5s infinite alternate;
+}
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 25px #fff;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+<!-- HOME -->
+<div class="page active" id="home">
+<h1>❤️ Lav to Love ❤️</h1>
+
+<div class="text">
+Not planned… not expected…<br>
+But somehow… the best thing that ever happened 💫
+</div>
+
+<div>
+<button onclick="showPage('story')">Our Story 💬</button>
+<button onclick="showPage('feelings')">Feelings ❤️</button>
+<button onclick="showPage('distance')">Distance 🌍</button>
+<button onclick="showPage('gallery')">Memories 📸</button>
+<button onclick="showPage('final')">One Truth 💖</button>
+</div>
+</div>
+
+<!-- STORY -->
+<div class="page" id="story">
+<h1>💬 That Random Night</h1>
+
+<div class="story">
+<div class="story-content">
+It was just a random night...<br><br>
+
+I clicked on Omegle...<br>
+No expectations...<br><br>
+
+And then...<br>
+You appeared.<br><br>
+
+At first... just a normal chat...<br>
+But it didn’t feel normal.<br><br>
+
+It felt easy...<br>
+It felt real...<br><br>
+
+One conversation became many...<br>
+Days became nights...<br><br>
+
+And slowly...<br>
+You became important.<br><br>
+
+Not planned...<br>
+But perfect.<br><br>
+
+And that’s how...<br>
+Lav turned into Love ❤️
+</div>
+</div>
+
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<!-- FEELINGS -->
+<div class="page" id="feelings">
+<h1>❤️ When It Changed</h1>
+<div class="text">
+It didn’t happen suddenly…<br><br>
+
+It was in the little things…<br>
+Waiting for your message…<br>
+Smiling at my phone 😄<br><br>
+
+You became my habit…<br>
+My comfort…<br>
+My favorite notification 💬<br><br>
+
+And somewhere in between…<br>
+I didn’t just like you…<br><br>
+
+👉 I fell for you ❤️
+</div>
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<!-- DISTANCE -->
+<div class="page" id="distance">
+<h1>🌍 Us vs Distance</h1>
+
+<div class="distance">
+Bangalore ❤️ Jaipur
+</div>
+
+<div class="text">
+Miles apart…<br>
+But never distant ❤️<br><br>
+
+We don’t meet every day…<br>
+But we choose each other every day 💫<br><br>
+
+And that…<br>
+is what makes us real 💖
+</div>
+
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<!-- GALLERY -->
+<div class="page" id="gallery">
+<h1>📸 Our Moments</h1>
+
+<div class="gallery">
+<img id="slider" src="https://picsum.photos/300/400?1">
+</div>
+
+<div class="text" style="font-size:1rem;">
+Not just photos… memories we created together 💕
+</div>
+
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+<!-- FINAL -->
+<div class="page" id="final">
+<h1>❤️ One Truth ❤️</h1>
+
+<div class="text">
+Out of millions of people…<br>
+Out of random moments…<br><br>
+
+Somehow… I found YOU.<br><br>
+
+And that…<br>
+is my favorite thing in this world 💫<br><br>
+
+No matter the distance…<br>
+No matter the time…<br><br>
+
+👉 I will always choose you ❤️
+</div>
+
+<div class="love">
+I love you Nandu ❤️
+</div>
+
+<button onclick="showPage('home')">⬅ Back</button>
+</div>
+
+</div>
+
+<script>
+
+/* page switch */
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+/* hearts */
+function createHeart(){
+const h=document.createElement("div");
+h.classList.add("heart");
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(Math.random()*20+10)+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+}
+setInterval(createHeart,250);
+
+/* slider */
+/* slider */
+const imgs=[
+"images/img1.jpeg",
+"images/img2.jpeg",
+"images/img3.jpeg",
+"images/img4.jpeg",
+"images/img5.jpeg"
+];
+
+let i=0;
+
+setInterval(()=>{
+    i=(i+1)%imgs.length;
+    document.getElementById("slider").src=imgs[i];
+},2000);
+
+</script>
+
+</body>
+</html>
